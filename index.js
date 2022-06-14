@@ -237,24 +237,82 @@ todos.forEach((todo) => {
 // -----------------------------------------------------------------
 
 // Class(object oriented programming)
+/*
+class Person {
+  constructor(firstname, lastname, dob) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.dob = new Date(dob);
+  }
 
-// class Person {
-//   constructor(firstname, lastname, dob) {
-//     this.firstname = firstname;
-//     this.lastname = lastname;
-//     this.dob = new Date(dob);
-//   }
+  getFullName() {
+    return `${this.firstname} ${this.lastname}`;
+  }
 
-//   getFullName() {
-//     return `${this.firstname} ${this.lastname}`;
-//   }
+  getBirthYear() {
+    return this.dob.getFullYear();
+  }
+}
 
-//   getBirthYear() {
-//     return this.dob.getFullYear();
-//   }
-// }
+const person1 = new Person("Arvind", "Batham", "1-1-2001");
+const person2 = new Person("Alex", "Anonymous", "2-2-2002");
+console.log(person1.getBirthYear());
+console.log(person2.getFullName()); */
 
-// const person1 = new Person("Arvind", "Batham", "1-1-2001");
-// const person2 = new Person("Alex", "Anonymous", "2-2-2002");
-// console.log(person1.getBirthYear());
-// console.log(person2.getFullName());
+// ------------------------------------------------------------
+
+// DOM(document object model)
+/*
+// single element
+console.log(document.getElementById("form"));
+console.log(document.querySelector("form"));
+
+// multiple element
+console.log(document.querySelectorAll(".col-25"));
+console.log(document.getElementsByClassName("col-75"));
+console.log(document.getElementsByTagName("ul"));
+
+// for acessing each element of the nodelist
+const items = document.querySelectorAll("items");
+items.forEach((item) => console.log(item));
+
+// removing the elements
+const ul = document.querySelector(".items");
+ul.remove();
+ul.lastElementChild.remove();
+
+// changing the content of the elemements
+ul.firstElementChild.textContent = "hello";
+ul.children[1] = "Arvind";
+ul.lastElementChild.innerHTML = "<h1>Batham<h1>";
+
+// can use css
+
+const btn = document.querySelector(".btn");
+btn.style.background = "red";
+
+// eventListener
+
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("form").style.background = "#ccc";
+  document.querySelector("body").classList.add("bg-dark"); // adding class
+  document.querySelector(".items").lastElementChild.innerHTML =
+    "<h1> Hello <h1>";
+});
+*/
+/*
+const myform = document.querySelector("#form");
+const firstName = document.querySelector("#fname");
+const lastName = document.querySelector("#lname");
+const country = document.querySelector("#Country");
+const subject = document.querySelector("#subject");
+
+myform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(` Name : ${firstName.value} ${lastName.value}`);
+  console.log(`Country : ${country.value}`);
+  console.log(`Subject : ${subject.value}`);
+});
+*/
